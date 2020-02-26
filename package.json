@@ -1,13 +1,17 @@
 {
-  "name": "server",
+  "name": "opinion-poller",
   "version": "1.0.0",
-  "description": "",
+  "description": "Provides survey feedback services by email",
   "main": "index.js",
+  "engines": {
+    "node": "^11.10.1",
+    "npm": "^6.7.0"
+  }
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "torrenzo",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
