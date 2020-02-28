@@ -9,7 +9,7 @@ router.get('/google',
   })
 );
 
-router.get('/google/callback', passport.authenticate('google'));
+router.get('/google/callback', passport.authenticate('google'), Controller.login);
 
 router.get('/logout', Controller.logout);
 
