@@ -27,7 +27,7 @@ app.use('/auth', authRouter);
 app.use('/api/users', apiUserRouter);
 
 app.get('/', (req, res, next)=> {
-  res.send('success');
+  res.send({report: 'success'});
 })
 
 
