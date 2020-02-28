@@ -1,4 +1,4 @@
-const environment = process.env.NODE_DEV;
+const environment = process.env.NODE_ENV;
 
 switch (environment) {
   case 'production':
