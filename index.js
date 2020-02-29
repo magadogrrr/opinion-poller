@@ -29,15 +29,18 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 app.use('/auth', authRouter);
 app.use('/api/users', apiUserRouter);
 app.use('/api/surveys', apiSurveyRouter);
 app.use('/api/stripe', apiStripeRouter);
 
 if (process.env.NODE_ENV === 'production') {
+
+  console.error('=============== we are in production =============');
   app.use(express.static('client/build'));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    return res.sendFile('./client/build/index.html', { root: __dirname });
   });
 }
 
